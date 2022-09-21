@@ -1,0 +1,552 @@
+:root{
+    --darkgrey: #212329;
+    --brightred: #f9423d;
+    --white: #fff;
+    --lightred: #f9433dcc;  
+    --darkblue: hsl(243, 87% ,12%);
+    --desaturatedlblue: hsl(238,22%,44%);
+    --brightblue: hsl(224,93%,58%);
+    --moderatecyan: hsl(170, 45%, 43%);
+    --lightgrayishblue: hsl(240, 75%, 98%);
+    --lightgray: hsl(0, 0%, 75%);
+
+
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, button{
+    font-family: 'Poppins' , sans-serif;
+}
+
+.nav-container{
+    width: 100%;
+    background-color: var(--white);
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+#navbar-logo{
+    color: var(--darkgrey);
+    justify-self: start;
+    margin-left: 20px;
+}
+
+#navbar-logo{
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    list-style: none;
+    text-align: end;
+    width: 40%;
+    justify-self: end;
+}
+
+.nav-links{
+    color: var(--darkgrey);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* .nav-links:hover{
+    color: var(--brightred);
+    transition: all 0.2s ease-out;
+} */
+
+.nav-links:hover {
+    opacity: 1;
+}
+
+
+.nav-links::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #031D44;
+}
+
+.nav-links-ltr::before {
+    width: 0%;
+    bottom: 870px;
+}
+  
+.nav-links-ltr:hover::before {
+    width: 5%;
+}
+  
+.menu-toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--darkgrey);
+}
+
+@media screen and (max-width:768px) {
+    .nav-container{
+        position: relative;
+    }
+
+    .nav-menu{
+        display: grid;
+        grid-template-columns: auto;
+        background-color: var(--brightblue);
+        width: 100%;
+        margin: 0;
+        position: absolute;
+        top: 80px;
+        left: 100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    #navbar-logo{
+        margin-left: 20px;
+    }
+
+    .nav-menu.active{
+        background: var(--white);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links{
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover{
+        background-color: var(--brightblue);
+        color: var(--white);
+        transition: all 0.4s ease-out;
+    }
+
+    .navbar{ 
+        width: 100%;
+    }
+
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%,20%);
+    }
+    
+    .menu-toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+    
+    #menu-toggle:hover{
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2){
+     opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    } 
+    
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+
+
+/* HERO SECTION */
+#Features{
+    display: flex;
+    flex-direction: column;
+}
+
+.files-img{
+    flex: 100%;
+    width: 100%;
+    margin: 2em 0 0 0em;
+}
+
+.text-section{
+    margin-top: 1rem;
+    flex: 100%;
+}
+
+.text-section-1{
+    text-align: center;
+    margin-bottom: .6rem;
+    color: var(--darkblue);
+}
+
+.text-section-2{
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    color: var(--darkblue);
+}
+
+.email-signup{
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Email-bar{
+  width: 100%;
+  height: 35px;
+  margin-bottom: 1rem;
+}
+
+.btn-submit{
+    color: var(--white);
+    background-color: var(--brightblue);
+    border: none;
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* TEAM */
+#Team{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 10rem;
+    flex: 100%;
+}
+
+.team-icon-2{
+    max-width: 100%;
+    margin-bottom: 6rem;
+}
+
+.team-text{
+    flex: 100%;
+}
+
+.team-text-1{
+    text-align: center;
+    color: var(--darkblue);
+}
+
+.team-text-2{
+    color: var(--lightgray);
+    margin-top: 1rem;
+    margin-bottom: 1.1rem;
+    margin-left: .9rem;
+}
+
+.team-text-3{
+    color: var(--lightgray);
+    margin-top: 1rem;
+    margin-left: .9rem;
+}
+
+.other-properties{
+    display: flex;
+    flex-direction: row;
+    margin-top: .91rem;
+    margin-left: 1rem;
+    text-decoration: underline;
+    color: hsl(170, 45%, 43%);
+    align-self: center;
+}
+
+
+#testimonial{
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    margin-top: 3rem;
+    margin-left: 1rem;
+}
+
+.testimonial-card{
+    padding-top: 2rem;
+    padding-left: 1rem;
+    display: inline;
+    height: 200px;
+    margin-bottom: 1rem;
+    max-width: 450px;
+    background-color:  var(--lightgrayishblue);
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.19);
+}
+
+.Kyle-profile{
+    margin-top: 1rem;
+    border-radius: 70%;
+    height: 50px;
+    float: left;
+}
+
+.testimonial-text{
+    margin-top: 1.5rem;
+    margin-left: 4rem;
+}
+
+#SignIN{
+    margin-top: 4rem;
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: auto;
+    display: flex;
+    flex-direction: column;
+    flex:100%;
+    background-color: var(--brightblue);
+}
+
+.signin-text-1{
+    color: var(--white);
+    margin-bottom: 1.2rem;
+}
+
+.signin-text-2{
+    margin-bottom: 1.2rem;
+    color: var(--white);
+}
+
+.email-gst{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.Email-bar-1{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 1rem;
+}
+
+.btn-submit-1{
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: var(--white);
+    background-color: var(--darkblue);
+}
+
+#footer{
+    background-color: var(--darkblue);
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    height: 500px;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    flex: 100%;
+    flex-direction: column;
+}
+
+.fylo-footer-logo{
+    margin-bottom: 1rem;
+}
+
+.footer-text{    
+    margin-bottom: 3rem;
+}
+
+.phone-text{
+    position: relative;
+    left: 1rem;
+}
+
+.email-text{
+    position: relative;
+    left: 1rem;
+}
+
+.fylo-subtext-1{
+    margin-bottom: 1rem;
+}
+
+.footer-text-2{
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer-text-icons{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* MEDIA RESPONSIVITY */
+@media screen and (min-width:769px) {
+    #Features{
+     display: flex;
+     flex-direction: row-reverse;
+     margin-top: 3rem;
+   }
+  
+    .files-img{
+     width: 50%;
+     flex: 50%;
+    }
+
+    .text-section{
+     display: flex;
+     flex-direction: column;
+     display: flex;
+     flex: 50%;
+    }
+
+  .text-section-1{
+    text-align: left;
+    margin-left: 2rem;
+  }
+
+  .text-section-2{
+    text-align: left;
+  }
+
+  .Email-bar{
+   width: 70%;
+   margin-left: 2rem;
+  }
+
+  .btn-submit{
+    width: 70%;
+    margin-left: 2rem;
+  }
+
+  #Team{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .team-icon-2{
+    flex: 50%;
+    width: 50%;
+  }
+
+  .team-text-1{
+    text-align: left;
+    margin-left: 1rem;
+  }
+
+  #SignIN{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .gettoday{
+    text-align: left;
+    flex: 50%;
+    margin-left: 1rem;
+  }
+  
+  .email-gst{
+    flex: 50%;
+    margin-bottom: 7rem;
+  }
+
+  .Email-bar-1{
+    width: 90%;
+    margin-right: 1rem;
+  }
+
+  .btn-submit-1{
+    width: 50%;
+    margin-right: 10rem;
+  }
+  #footer{
+    height: 300px;
+    padding-top: 5rem;
+  } 
+
+  .fylo-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+   .footer-text{
+    display: flex;
+    flex-direction: row;
+   }
+
+   .footer-text{
+    display: flex;
+    flex-direction: column;
+    flex: 50%;
+   }
+
+   .fylo-footer-logo{
+    width: 35%;
+   }
+      
+  .footer-main-text{
+    flex: 50%;
+  }
+
+  .footer-text-2{
+    flex: 25%;
+    margin-top: 3rem;
+  }
+
+  .footer-text-3{
+    flex: 25%;
+  }
+
+  .footer-text-icons{
+    flex: 25%;
+  }
+
+
+}
+
+@media screen and (min-width:1200px) {
+    .text-section{
+     margin: 5rem auto;
+    }
+    
+    .team-text{
+        margin-top: -5rem;
+        padding-top: 10rem;
+    }
+
+    .team-icon-2{
+        margin-top: -5rem;
+    }
+    .Email-bar-1{
+        width: 80%;
+    }
+
+    .btn-submit-1{
+        margin-right: 13rem;
+    }
+}
