@@ -217,19 +217,21 @@ h1, button{
     align-self: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-left: 5rem;
 }
 
 .Email-bar{
-  width: 100%;
+  width: 80%;
   height: 35px;
   margin-bottom: 1rem;
+
 }
 
 .btn-submit{
     color: var(--white);
     background-color: var(--brightblue);
     border: none;
-    width: 100%;
+    width: 80%;
     height: 30px;
     cursor: pointer;
 }
@@ -359,6 +361,8 @@ h1, button{
     background-color: var(--darkblue);
 }
 
+/* FOOTER */
+
 #footer{
     background-color: var(--darkblue);
     width: 100%;
@@ -411,10 +415,17 @@ h1, button{
      display: flex;
      flex-direction: row-reverse;
      margin-top: 3rem;
+     gap: 1rem;
+     align-self: center;
+   }
+
+   .email-signup{
+    width: 90%;
+    margin-right: 4rem;
    }
   
     .files-img{
-     width: 50%;
+     width: 49%;
      flex: 50%;
     }
 
@@ -424,7 +435,7 @@ h1, button{
      display: flex;
      flex: 50%;
     }
-
+     
   .text-section-1{
     text-align: left;
     margin-left: 2rem;
@@ -436,22 +447,28 @@ h1, button{
 
   .Email-bar{
    width: 70%;
-   margin-left: 2rem;
+   float: left;
   }
 
   .btn-submit{
     width: 70%;
-    margin-left: 2rem;
+    float: left;
   }
 
   #Team{
     display: flex;
     flex-direction: row-reverse;
+    gap: 1rem;
+  }
+
+  .team-text{
+    align-self: center; 
   }
 
   .team-icon-2{
     flex: 50%;
     width: 50%;
+    margin-top: 5rem;
   }
 
   .team-text-1{
@@ -531,17 +548,9 @@ h1, button{
 
 @media screen and (min-width:1200px) {
     .text-section{
-     margin: 5rem auto;
-    }
-    
-    .team-text{
-        margin-top: -5rem;
-        padding-top: 10rem;
+     align-self: center;   
     }
 
-    .team-icon-2{
-        margin-top: -5rem;
-    }
     .Email-bar-1{
         width: 80%;
     }
