@@ -404,6 +404,12 @@ h1, button{
     margin-top: 1rem;
 }
 
+.copyright{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
 /* MEDIA RESPONSIVITY */
 @media screen and (min-width:769px) {
     #Features{
@@ -536,6 +542,9 @@ h1, button{
 
   .footer-text-icons{
     flex: 25%;
+  }
+    .copyright{
+    margin-top: 25px;
   }
 
 
