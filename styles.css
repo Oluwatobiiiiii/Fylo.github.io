@@ -68,11 +68,6 @@ h1, button{
     cursor: pointer;
 }
 
-/* .nav-links:hover{
-    color: var(--brightred);
-    transition: all 0.2s ease-out;
-} */
-
 .nav-links:hover {
     opacity: 1;
 }
@@ -180,9 +175,9 @@ h1, button{
 
 }
 
-
-
 /* HERO SECTION */
+
+
 #Features{
     display: flex;
     flex-direction: column;
@@ -221,8 +216,8 @@ h1, button{
 }
 
 .Email-bar{
-  width: 80%;
-  height: 35px;
+  width: 300px;
+  height: 40px;
   margin-bottom: 1rem;
 
 }
@@ -231,8 +226,8 @@ h1, button{
     color: var(--white);
     background-color: var(--brightblue);
     border: none;
-    width: 80%;
-    height: 30px;
+    width: 300px;
+    height: 40px;
     cursor: pointer;
 }
 
